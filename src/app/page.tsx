@@ -155,7 +155,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="section-title">
-                From <span className="gradient-text">Architecture</span> to Code
+                From <span className="gradient-text">Architecture</span> to <span className="gradient-text">Code</span>
               </h2>
               <p className="text-[#a1a1aa] leading-relaxed mb-6">
                 My journey from designing physical structures to crafting digital experiences has given me a unique perspective on software development. I bring architectural thinking—attention to detail, systematic design, and user-centered approach—to every project I build.

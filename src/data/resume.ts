@@ -30,8 +30,8 @@ export const education = [
       "Web Application Development (A)",
       "Software Engineering (A)",
       "Networks & Internet Systems (A-)",
-      "Distributed Systems",
-      "Cloud Computing",
+      "Distributed Systems (A-)",
+      "Cloud Computing (A)",
     ],
   },
   {
