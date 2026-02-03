@@ -158,17 +158,9 @@ export default function Home() {
                 From <span className="gradient-text">Architecture</span> to <span className="gradient-text">Code</span>
               </h2>
               <p className="text-[#a1a1aa] leading-relaxed mb-6">
-                My journey from designing physical structures to crafting digital experiences has given me a unique perspective on software development. I bring architectural thinking—attention to detail, systematic design, and user-centered approach—to every project I build.
+                My journey from designing physical structures to crafting digital experiences has given me a unique perspective on software development. I bring architectural thinking like attention to detail, systematic design, and user-centered approach to every project I build.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-lg bg-[rgba(0,212,255,0.1)] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#00d4ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <span className="text-sm">8+ Years in Architecture</span>
-                </div>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-lg bg-[rgba(139,92,246,0.1)] flex items-center justify-center">
                     <svg className="w-5 h-5 text-[#8b5cf6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,6 +168,14 @@ export default function Home() {
                     </svg>
                   </div>
                   <span className="text-sm">MSc Computer Science @ UCD</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-lg bg-[rgba(0,212,255,0.1)] flex items-center justify-center">
+                    <svg className="w-5 h-5 text-[#00d4ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <span className="text-sm">8+ Years in Architecture</span>
                 </div>
               </div>
               <Link href="/about" className="btn-primary">
@@ -194,7 +194,7 @@ export default function Home() {
                 <div className="text-sm text-[#a1a1aa]">GPA at UCD</div>
               </div>
               <div className="glass-card p-6 text-center">
-                <div className="text-3xl font-bold gradient-text mb-2">7+</div>
+                <div className="text-3xl font-bold gradient-text mb-2">20+</div>
                 <div className="text-sm text-[#a1a1aa]">Technologies</div>
               </div>
               <div className="glass-card p-6 text-center">

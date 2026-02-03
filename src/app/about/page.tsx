@@ -40,21 +40,22 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-[#a1a1aa] leading-relaxed mb-10">
             <p>
-              For nearly a decade, I shaped the physical world as an architect. I designed complex 
-              hospital campuses and cultural centers, managing budgets, strict regulations, and 
-              multifaceted teams. It was fulfilling work, but I found myself increasingly drawn to 
+              For nearly five years, I shaped the physical world as a professional architect. I designed complex 
+              campuses and cultural centers, while balancing budgets, strict regulations, and 
+              diverse teams. It was fulfilling work, but I found myself increasingly drawn to 
               the logic and speed of the digital tools we used.
             </p>
             <p>
-              I realized that the principles of great architecture—<span className="text-white">structural integrity, 
-              user-centric flow, and scalability</span>—translate perfectly to code. The difference? 
-              In software, I can iterate in seconds, not years.
+              I began to see that the principles behind great architecture, <span className="text-white">structural integrity, 
+              user-centric flow, and scalability</span>, translate perfectly into software. The difference is efficiency: in code, ideas evolve in seconds, 
+  not years.
             </p>
             <p>
               Pivotting to Computer Science wasn't starting over; it was refactoring my career. 
               I brought my architectural rigor to the world of distributed systems. Now, instead of 
-              blueprints, I draft system designs. Instead of concrete, I build with cloud infrastructure. 
-              But the goal remains the same: <strong>building experiences that stand the test of time.</strong>
+              blueprints, I design system architectures. Instead of concrete and steel, I build with cloud infrastructure. 
+              The goal, however, remains unchanged: 
+  <strong> to create experiences built to last.</strong>
             </p>
           </div>
 

@@ -1,30 +1,8 @@
 "use client";
 
 import { personalInfo, skills, education, experience } from "@/data/resume";
-import { useRef } from "react";
 
 export default function ResumePage() {
-  const resumeRef = useRef<HTMLDivElement>(null);
-
-  const handleDownloadPDF = async () => {
-    if (typeof window !== "undefined") {
-      const html2pdf = (await import("html2pdf.js")).default;
-      const element = resumeRef.current;
-      
-      if (element) {
-        const opt = {
-          margin: [0.5, 0.5, 0.5, 0.5],
-          filename: `${personalInfo.name.replace(" ", "_")}_Resume.pdf`,
-          image: { type: "jpeg", quality: 0.98 },
-          html2canvas: { scale: 2, useCORS: true },
-          jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
-        };
-        
-        html2pdf().set(opt).from(element).save();
-      }
-    }
-  };
-
   return (
     <div className="page-transition py-12 px-6">
       <div className="max-w-4xl mx-auto">
@@ -36,17 +14,20 @@ export default function ResumePage() {
             </h1>
             <p className="text-[#a1a1aa]">View online or download as PDF</p>
           </div>
-          <button onClick={handleDownloadPDF} className="btn-primary">
+          <a 
+            href="/resume.pdf" 
+            download={`${personalInfo.name.replace(" ", "_")}_Resume.pdf`}
+            className="btn-primary"
+          >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
             Download PDF
-          </button>
+          </a>
         </div>
 
         {/* Resume Preview */}
         <div
-          ref={resumeRef}
           className="bg-white text-gray-900 rounded-lg shadow-2xl overflow-hidden"
           style={{ fontFamily: "system-ui, sans-serif" }}
         >
@@ -145,6 +126,81 @@ export default function ResumePage() {
               </div>
             </section>
 
+            {/* Projects Section */}
+            <section>
+              <h2 className="text-lg font-bold text-[#1a1a2e] border-b-2 border-[#1a1a2e] pb-1 mb-3">
+                KEY PROJECTS
+              </h2>
+              <div className="space-y-4 text-sm">
+                <div>
+                  <div className="flex justify-between items-baseline">
+                    <h3 className="font-bold text-base">CineQuest</h3>
+                    <span className="text-gray-500 text-xs">Dec 2025</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-1">A microservice-based movie discovery platform</p>
+                  <p className="text-xs text-gray-500 mb-2 font-mono">
+                    <span className="font-semibold">Tech Stack:</span> Java, Spring Boot, React, Docker, Kubernetes, Kafka, Redis, gRPC
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-1 ml-1">
+                    <li>Contributed to the design and implementation of a distributed microservice-based platform with clear service boundaries and architectural trade-off analysis</li>
+                    <li>Developed the Movie Service integrating an external TMDB API with Redis caching to reduce latency and handle rate limits</li>
+                    <li>Implemented the Notification Service, consuming Kafka events to deliver asynchronous email notifications without blocking core user workflows</li>
+                    <li>Created the complete React frontend with responsive design, and integrated it with backend services via a centralized API Gateway</li>
+                    <li>Participated in containerization and deployment using Docker and Kubernetes</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="flex justify-between items-baseline">
+                    <h3 className="font-bold text-base">SmartTrip NYC</h3>
+                    <span className="text-gray-500 text-xs">Jul 2025</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-1">Full-Stack Travel Itinerary Planner</p>
+                  <p className="text-xs text-gray-500 mb-2 font-mono">
+                    <span className="font-semibold">Tech Stack:</span> React, Spring Boot, Flask, PostgreSQL, Docker, Nginx
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-1 ml-1">
+                    <li>Led system maintenance phase, coordinating frontend, backend, and ML teams to ensure platform stability</li>
+                    <li>Implemented frontend and backend changes to improve authentication flows, including JWT-based authentication and Google OAuth integration, while managing bug fixes, feature requests following agile practices</li>
+                    <li>Managed production deployment using Docker Compose, Nginx, and automated CI/CD pipelines</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="flex justify-between items-baseline">
+                    <h3 className="font-bold text-base">Dublin BikeShare App</h3>
+                    <span className="text-gray-500 text-xs">May 2025</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-1">Real-time Availability & Predictive Dashboard</p>
+                  <p className="text-xs text-gray-500 mb-2 font-mono">
+                    <span className="font-semibold">Tech Stack:</span> Flask, JavaScript, HTML, CSS, AWS EC2/RDS, scikit-learn, Chart.js
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-1 ml-1">
+                    <li>Developed full-stack web application displaying real-time Dublin bike availability and weather conditions</li>
+                    <li>Trained a Random Forest Regressor model to predict bike availability with R² score of 0.96</li>
+                    <li>Visualized historical trends and predictions interacting with Google Maps overlays.</li>
+                    <li>Deployed the web app on AWS EC2 successfully</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="flex justify-between items-baseline">
+                    <h3 className="font-bold text-base">Heart Disease Risk Analytics Dashboard</h3>
+                    <span className="text-gray-500 text-xs">Nov 2025</span>
+                  </div>
+                  <p className="text-gray-600 italic mb-1">Big Data Processing & Visualization</p>
+                  <p className="text-xs text-gray-500 mb-2 font-mono">
+                    <span className="font-semibold">Tech Stack:</span> Hadoop, Hive, Docker, SQL, Python, JavaScript, HTML, CSS
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-1 ml-1">
+                    <li>Built a cloud-based data analytics pipeline using Hadoop HDFS and Hive to process and analyze clinical datasets</li>
+                    <li>Implemented SQL-based data preprocessing and rule-based risk scoring to identify demographic and risk-level patterns in patient data</li>
+                    <li>Developed an interactive web dashboard and risk calculator to visualize analysis results and provide real-time risk assessment for users</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
             {/* Experience */}
             <section>
               <h2 className="text-lg font-bold text-[#1a1a2e] border-b-2 border-[#1a1a2e] pb-1 mb-3">
@@ -169,43 +225,6 @@ export default function ResumePage() {
                 ))}
               </div>
             </section>
-
-            {/* Projects Section */}
-            <section>
-              <h2 className="text-lg font-bold text-[#1a1a2e] border-b-2 border-[#1a1a2e] pb-1 mb-3">
-                KEY PROJECTS
-              </h2>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <div className="flex justify-between">
-                    <h3 className="font-semibold">CineQuest (Microservices, Kubernetes, Kafka, gRPC)</h3>
-                    <span className="text-gray-500">December 2025</span>
-                  </div>
-                  <p className="text-gray-700">Distributed microservice platform with React frontend, Redis caching, and Kafka event-driven notifications</p>
-                </div>
-                <div>
-                  <div className="flex justify-between">
-                    <h3 className="font-semibold">SmartTrip NYC (React, Spring Boot, Flask, Docker)</h3>
-                    <span className="text-gray-500">July 2025</span>
-                  </div>
-                  <p className="text-gray-700">Full-stack travel platform with JWT/OAuth authentication and CI/CD deployment</p>
-                </div>
-                <div>
-                  <div className="flex justify-between">
-                    <h3 className="font-semibold">Dublin BikeShare (Flask, AWS, Chart.js)</h3>
-                    <span className="text-gray-500">May 2025</span>
-                  </div>
-                  <p className="text-gray-700">Real-time bike availability web app with predictive analytics and Google Maps integration</p>
-                </div>
-                <div>
-                  <div className="flex justify-between">
-                    <h3 className="font-semibold">Heart Disease Analytics (Hadoop, Hive, ML)</h3>
-                    <span className="text-gray-500">November 2025</span>
-                  </div>
-                  <p className="text-gray-700">Big data analytics dashboard achieving 93% accuracy in risk prediction</p>
-                </div>
-              </div>
-            </section>
           </div>
         </div>
 
@@ -217,3 +236,4 @@ export default function ResumePage() {
     </div>
   );
 }
+

@@ -62,8 +62,7 @@ export const experience = [
     location: "Dublin, Ireland",
     period: "Sep 2025 - Present",
     highlights: [
-      "Supporting Python programming beginners through tutorials and code reviews",
-      "Identifying coding errors and providing constructive feedback on assignments",
+      "Mentored students in Python & Software Engineering, debugging code and reviewing assignments",
     ],
   },
   {
@@ -72,9 +71,7 @@ export const experience = [
     location: "Hubei, China",
     period: "Jul 2022 - Jan 2024",
     highlights: [
-      "Managed timelines, budgets, and quality for large-scale projects under technical and regulatory constraints",
-      "Translated complex technical requirements into structured specifications and documentation",
-      "Collaborated with cross-functional teams and external stakeholders to ensure compliant project delivery",
+      "Led cross-functional teams to deliver complex, large-scale projects under strict regulatory constraints",
     ],
   },
   {
@@ -83,7 +80,7 @@ export const experience = [
     location: "Beijing, China",
     period: "Jun 2019 - Mar 2022",
     highlights: [
-      "Coordinated tasks and deliverables across multiple projects in collaboration with senior team members",
+      "Coordinated project deliverables and technical documentation in a fast-paced environment",
     ],
   },
 ];
