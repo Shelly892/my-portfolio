@@ -117,7 +117,7 @@ export default function Home() {
 
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
-                      {project.techStack.slice(0, 3).map((tech) => (
+                      {project.techStack.slice(0, 5).map((tech) => (
                         <span key={tech} className="skill-badge text-xs">
                           {tech}
                         </span>
